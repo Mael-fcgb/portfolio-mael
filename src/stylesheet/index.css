@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Roslindale;
+    src: url(/src/fonts/Roslindale-DisplayRegular-Testing.otf);
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url(/src/fonts/Manrope-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Roslindale-Italic;
+    src: url(/src/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.otf)
+}
+
+
+h1{
+    font-family: Roslindale;
+    font-size: 110px;
+    letter-spacing: 18%;
+}
+
+h1 span{
+    font-family: Roslindale-Italic;
+}
+
+
+.subtitle{
+    font-family: Manrope;
+    font-size: 87px;
+    letter-spacing: 65%;
+}
+
+.main-img{
+    width: 440px;
+    height: 552px;
+}
+
+ul{
+    font-family: Roslindale;
+    font-size: 96px;
+    color: white;
+}
