@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Roslindale';
     src: url(/src/fonts/Roslindale-DisplayRegular-Testing.otf);
@@ -13,33 +17,53 @@
     src: url(/src/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.otf)
 }
 
-.main-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 300px;
+@font-face {
+    font-family: 'Roslindale-Extra-Light';
+    src: url(/src/fonts/Roslindale-DisplayExtraLight-Testing.otf)
 }
 
-h1{
+@font-face {
+    font-family: 'Manrope-Light';
+    src: url(/src/fonts/Manrope-Light.ttf);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 400px;
+}
+
+h1 {
     font-family: 'Roslindale';
     font-size: 110px;
-    letter-spacing: 18%;
+    letter-spacing: 22px;
+    padding-bottom: 100px;
 }
 
-h1 span{
+h1 span {
     font-family: 'Roslindale-Italic';
 }
 
 
-.subtitle{
+.subtitle {
+    position: relative;
+    z-index: 2;
     font-family: 'Manrope';
     font-size: 87px;
-    letter-spacing: 65%;
+    letter-spacing: 60px;
 }
 
-.main-img{
-  margin-top: -260px;
+.main-content .subtitle{
+    z-index: 2;
+    position: relative;
+    mix-blend-mode: difference;
+}
+
+.main-img {
+    z-index: 1;
+    margin-top: -260px;
     width: 440px;
     height: 552px;
 }
@@ -47,16 +71,30 @@ h1 span{
 
 
 /* Naviguation */
-.naviguation{
-  padding: 100px 0;
-  background-color: #000;
+.naviguation {
+    padding: 100px 0;
+    background-color: #000;
 }
-.naviguation nav ul{
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  gap: 76px;
-  font-family: 'Roslindale';
-  font-size: 96px;
-  color: white;
+
+.naviguation nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 76px;
+    font-family: 'Roslindale-Extra-Light';
+    font-size: 96px;
+    color: white;
+}
+
+h2 {
+    font-family: 'Roslindale-Extra-Light';
+    font-size: 96px;
+}
+
+.job {
+    font-family: 'Manrope-Light';
+    font-size: 96px;
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
 }
