@@ -27,12 +27,18 @@ html {
     src: url(/src/fonts/Manrope-Light.ttf);
 }
 
+body {
+    transition: background-color 0.5s ease; /* Douce transition pour le fond */
+    background-color: white; /* Fond par défaut */
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 400px;
+    padding-bottom: 200px;
 }
 
 h1 {
@@ -73,7 +79,10 @@ h1 span {
 /* Naviguation */
 .naviguation {
     padding: 100px 0;
-    background-color: #000;
+}
+.naviguation.active {
+    background-color: black;
+    transition: background-color 0.5s ease;
 }
 
 .naviguation nav ul {
@@ -84,6 +93,7 @@ h1 span {
     font-family: 'Roslindale-Extra-Light';
     font-size: 96px;
     color: white;
+    transition: color 0.5s ease;
 }
 
 h2 {
