@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    transition: background-color 0.5s ease; /* Douce transition pour le fond */
+    transition: background-color 0.7s ease; /* Douce transition pour le fond */
     background-color: white; /* Fond par défaut */
 }
 
@@ -59,6 +59,7 @@ h1 span {
     font-family: 'Manrope';
     font-size: 87px;
     letter-spacing: 60px;
+    color: white;
 }
 
 .main-content .subtitle{
@@ -69,9 +70,9 @@ h1 span {
 
 .main-img {
     z-index: 1;
-    margin-top: -260px;
-    width: 440px;
-    height: 552px;
+    margin-top: -360px;
+    width: 572px;
+    height: 717px;
 }
 
 
@@ -79,10 +80,11 @@ h1 span {
 /* Naviguation */
 .naviguation {
     padding: 100px 0;
+    padding-bottom: -50px;
 }
 .naviguation.active {
     background-color: black;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.7s ease;
 }
 
 .naviguation nav ul {
@@ -93,12 +95,14 @@ h1 span {
     font-family: 'Roslindale-Extra-Light';
     font-size: 96px;
     color: white;
-    transition: color 0.5s ease;
+    transition: color 0.7s ease;
+    padding-right: 150px;
 }
 
 h2 {
     font-family: 'Roslindale-Extra-Light';
     font-size: 96px;
+    padding-left: 150px;
 }
 
 .job {
@@ -106,5 +110,9 @@ h2 {
     font-size: 96px;
     display: flex;
     justify-content: center;
+    padding-top: 300px;
+}
+
+.job-list{
     padding-top: 300px;
 }
