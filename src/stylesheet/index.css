@@ -69,11 +69,13 @@ h1 span {
 }
 
 .main-img {
+    position: relative;
     z-index: 1;
     margin-top: -360px;
     width: 572px;
     height: 717px;
 }
+
 
 
 
@@ -114,5 +116,46 @@ h2 {
 }
 
 .job-list{
-    padding-top: 300px;
+    padding-top: 350px;
 }
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px; 
+    background-color: #959595;
+    z-index: 10; 
+}
+
+body::before {
+    left: 86px; 
+}
+
+body::after {
+    right: 86px; 
+}
+
+
+.horizontal-line {
+    position: absolute;
+    top: 86px; 
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: #959595;
+    z-index: 10;
+}
+
+.horizontal-line2 {
+    position: absolute;
+    top: 1053px;
+    left: 0;
+    width: 100%; 
+    height: 1px; 
+    background-color: #959595; 
+    z-index: 10;
+}
+
