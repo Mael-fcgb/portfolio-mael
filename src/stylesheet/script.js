@@ -70,3 +70,13 @@ window.addEventListener('scroll', checkPosition);
 
 // Vérifie la position au chargement initial
 checkPosition();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const photoVinyl = document.getElementById("photoVinyl");
+
+  // Ajoute la classe "animate" après un léger délai
+  setTimeout(() => {
+      photoVinyl.classList.add("animate");
+  }, 500); // Délai de 500 ms (optionnel)
+});

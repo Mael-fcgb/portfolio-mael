@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roslindale-Extra-Light';
+    src: url(/src/fonts/Roslindale-DisplayExtraLight-Testing.otf)
+}
+
 .footer{
     font-family: 'Manrope';
     font-size: 25px;
@@ -5,4 +10,44 @@
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(15deg);
+    }
+}
+
+.vinyl{
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-vinyl{
+    position: absolute;
+    width: 408px;
+    height: 536px;
+    padding-top: 250px;
+    padding-left: 1000px;
+    opacity: 0; 
+    transition: opacity 0.5s ease-out;
+}
+
+h1{
+    font-size: 96px;
+    font-family: 'Roslindale-Extra-Light';
+}
+
+.vinyl-title{
+    padding-left: 400px;
+    padding-top: 350px;
+}
+
+.photo-vinyl.animate {
+    animation: fadeInSlideDown 0.5s ease-out forwards;
 }
