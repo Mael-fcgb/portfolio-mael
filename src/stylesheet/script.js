@@ -72,11 +72,21 @@ window.addEventListener('scroll', checkPosition);
 checkPosition();
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const photoVinyl = document.getElementById("photoVinyl");
 
-  // Ajoute la classe "animate" après un léger délai
-  setTimeout(() => {
-      photoVinyl.classList.add("animate");
-  }, 500); // Délai de 500 ms (optionnel)
+document.addEventListener("DOMContentLoaded", () => {
+    // Sélectionner toutes les images
+    const images = document.querySelectorAll(".photo-vinyl, .photo-poster, .photo-info");
+
+    // Ajouter des événements de survol et sortie
+    images.forEach((image) => {
+        image.addEventListener("mouseenter", () => {
+            image.style.opacity = "0.8"; // Réduit l'opacité au survol
+            image.style.cursor = "pointer"; // Change le curseur pour une main
+        });
+
+        image.addEventListener("mouseleave", () => {
+            image.style.opacity = "1"; // Réinitialise l'opacité
+        });
+    });
 });
+
