@@ -9,39 +9,39 @@ body::after {
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 1px; 
+    width: 1px;
     background-color: #959595;
-    z-index: 10; 
+    z-index: 10;
 }
 
 body::before {
-    left: 86px; 
+    left: 86px;
 }
 
 body::after {
-    right: 86px; 
+    right: 86px;
 }
 
 .horizontal-line {
     position: absolute;
-    top: 86px; 
+    top: 86px;
     left: 0;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: #959595;
     z-index: 10;
 }
 
 .horizontal-line2 {
     position: relative;
-    width: 100%; 
-    height: 1px; 
-    background-color: #959595; 
+    width: 100%;
+    height: 1px;
+    background-color: #959595;
     z-index: 10;
 }
 
 
-.footer{
+.footer {
     font-family: 'Manrope';
     font-size: 25px;
     display: flex;
@@ -55,66 +55,67 @@ body::after {
         opacity: 0;
         transform: translateY(-150px) rotate(0deg);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) rotate(15deg);
     }
 }
 
-h1{
+h1 {
     font-size: 120px;
     font-family: 'Roslindale-Extra-Light';
 }
 
-.vinyl{
+.vinyl {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 350px;
 }
 
-.photo-vinyl{
+.photo-vinyl {
     display: flex;
     position: absolute;
     width: 510px;
     height: 637.5px;
     padding-top: 300px;
     padding-left: 400px;
-    opacity: 100; 
+    opacity: 100;
     transform: rotate(15deg);
     transition: opacity 0.5s ease-out;
     z-index: 1;
     justify-content: center;
 }
 
-.vinyl-title{
+.vinyl-title {
     padding-top: 650px;
     padding-right: 650px;
     font-size: 12Opx;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
-    color: black; 
+    color: black;
     display: inline-block;
     z-index: 2;
     justify-content: center;
 }
 
 
-.poster{
+.poster {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 450px;
 }
 
-.photo-poster{
+.photo-poster {
     display: flex;
     position: absolute;
     width: 510px;
     height: 637.5px;
     padding-top: 300px;
     padding-left: 400px;
-    opacity: 100; 
+    opacity: 100;
     transform: rotate(15deg);
     transition: opacity 0.5s ease-out;
     z-index: 1;
@@ -122,52 +123,52 @@ h1{
 }
 
 
-.poster-title{
+.poster-title {
     padding-top: 650px;
     padding-right: 650px;
     font-size: 12Opx;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
-    color: black; 
+    color: black;
     display: inline-block;
     z-index: 2;
     justify-content: center;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-bottom: 450px;
 }
 
-.photo-info{
+.photo-info {
     display: flex;
     position: absolute;
     width: 510px;
     height: 637.5px;
     padding-top: 300px;
     padding-left: 400px;
-    opacity: 100; 
+    opacity: 100;
     transform: rotate(15deg);
     transition: opacity 0.5s ease-out;
     z-index: 1;
     justify-content: center;
 }
 
-.info-title{
+.info-title {
     padding-top: 650px;
     padding-right: 650px;
     font-size: 12Opx;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
-    color: black; 
+    color: black;
     display: inline-block;
     z-index: 2;
     justify-content: center;
 }
 
-.text-general{
+.text-general {
     display: flex;
     flex-direction: column;
 }
@@ -179,5 +180,29 @@ h1{
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: #000000; /* Couleur du texte */
+    color: #000000;
+    width: fit-content;
+}
+
+.buton {
+    transition: color 0.3s ease;
+}
+
+.buton::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Ligne cachée par défaut */
+    height: 1px;
+    /* Épaisseur de la ligne */
+    background-color: #000000;
+    /* Couleur de la ligne */
+    transition: width 0.3s ease;
+}
+
+.buton:hover::after {
+    width: 100%;
+
 }
