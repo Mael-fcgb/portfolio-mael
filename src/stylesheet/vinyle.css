@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'Roslindale-Extra-Light';
+    src: url(/src/fonts/Roslindale-DisplayExtraLight-Testing.otf)
+}
+
+@font-face {
+    font-family: 'Manrope-Light';
+    src: url(/src/fonts/Manrope-Light.ttf);
+}
+
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px; 
+    background-color: #959595;
+    z-index: 10; 
+}
+
+body::before {
+    left: 86px; 
+}
+
+body::after {
+    right: 86px; 
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 86px; 
+    left: 0;
+    width: 100%;
+    height: 1px; 
+    background-color: #959595;
+    z-index: 10;
+}
+
+.horizontal-line2 {
+    position: relative;
+    width: 100%; 
+    height: 1px; 
+    background-color: #959595; 
+    z-index: 10;
+}
+
+
+.footer{
+    font-family: 'Manrope';
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.vinyl{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 500px;
+}
+
+
+.photo-vinyl{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 663px;
+    height: 828px;
+    padding-top: 300px;
+    transition: opacity 0.5s ease-out;
+    z-index: 1;
+    padding-left: 4vw;
+}
+
+.vinyl-title{
+    padding-top: 300px;
+    font-size: 6vw;
+    padding-left: 4vw;
+    font-family: 'Roslindale-Extra-Light';
+    position: relative;
+    color: black; 
+    display: flex;
+    z-index: 2;
+}
+
+.description{
+    font-size: 2vw;
+    padding-top: 40px;
+    font-family: 'Roslindale-Extra-Light';
+    padding-left: 5vw;
+}
+
+
+
+.body-text{
+    font-family: 'Manrope-Light';
+    text-wrap: stable;
+    font-size: 2vw;
+    padding-left: 5vw;
+    line-height: 1.4em;
+    padding-top: 2vw;
+}

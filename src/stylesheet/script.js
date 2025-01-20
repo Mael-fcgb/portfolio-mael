@@ -71,22 +71,16 @@ window.addEventListener('scroll', checkPosition);
 // Vérifie la position au chargement initial
 checkPosition();
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Sélectionner toutes les images
-    const images = document.querySelectorAll(".photo-vinyl, .photo-poster, .photo-info");
+    const button = document.querySelector(".buton"); // Sélectionne le bouton
 
-    // Ajouter des événements de survol et sortie
-    images.forEach((image) => {
-        image.addEventListener("mouseenter", () => {
-            image.style.opacity = "0.8"; // Réduit l'opacité au survol
-            image.style.cursor = "pointer"; // Change le curseur pour une main
-        });
+    // Ajoute la classe 'hovered' au survol
+    button.addEventListener("mouseenter", () => {
+        button.classList.add("hovered");
+    });
 
-        image.addEventListener("mouseleave", () => {
-            image.style.opacity = "1"; // Réinitialise l'opacité
-        });
+    // Retire la classe 'hovered' quand la souris quitte le bouton
+    button.addEventListener("mouseleave", () => {
+        button.classList.remove("hovered");
     });
 });
-
