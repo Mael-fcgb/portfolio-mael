@@ -2,6 +2,28 @@
     font-family: 'Roslindale-Extra-Light';
     src: url(/src/fonts/Roslindale-DisplayExtraLight-Testing.otf)
 }
+@font-face {
+    font-family: 'Manrope';
+    src: url(/src/fonts/Manrope-ExtraLight.ttf);
+}
+
+.bouton-accueil {
+    font-family: 'Manrope';
+    font-size: 40px;
+    color: black; /* Couleur par défaut */
+    text-decoration: none; /* Retire le soulignement natif */
+    position: fixed; /* Fixé en haut à gauche */
+    top: 20px; /* Distance par rapport au haut de la page */
+    left: 120px; /* Distance par rapport au bord gauche */
+    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.bouton-accueil:hover {
+    color: gray; /* Change de couleur au survol */
+    cursor: pointer; /* Montre que c'est cliquable */
+}
+
 
 body::before,
 body::after {
