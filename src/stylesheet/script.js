@@ -84,3 +84,62 @@ document.addEventListener("DOMContentLoaded", () => {
         button.classList.remove("hovered");
     });
 });
+
+
+let lastScrollY = window.scrollY; // Position initiale du scroll
+const boutonAccueil = document.querySelector('.bouton-accueil');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY === 0) {
+        // Toujours visible en haut de la page
+        boutonAccueil.style.transform = 'translateY(0)';
+        boutonAccueil.style.opacity = '1';
+    } else if (currentScrollY > lastScrollY) {
+        // Cache le bouton en scrollant vers le bas
+        boutonAccueil.style.transform = 'translateY(-100%)';
+        boutonAccueil.style.opacity = '0';
+    } else {
+        // Affiche le bouton en scrollant vers le haut
+        boutonAccueil.style.transform = 'translateY(0)';
+        boutonAccueil.style.opacity = '1';
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+
+
+const vinylTitle = document.querySelector('.vinyl-title');
+const photoVinyl = document.querySelector('#photoVinyl');
+
+function adjustClipPath() {
+    const titleRect = vinylTitle.getBoundingClientRect();
+    const photoRect = photoVinyl.getBoundingClientRect();
+
+    // Vérifie si le texte chevauche l'image
+    if (
+        titleRect.bottom > photoRect.top &&
+        titleRect.top < photoRect.bottom &&
+        titleRect.right > photoRect.left &&
+        titleRect.left < photoRect.right
+    ) {
+        const overlapLeft = Math.max(photoRect.left - titleRect.left, 0);
+        const overlapRight = Math.max(titleRect.right - photoRect.right, 0);
+
+        const clipPath = `inset(0 ${overlapRight}px 0 ${overlapLeft}px)`;
+        vinylTitle.style.setProperty('--clip-path', clipPath);
+    } else {
+        // Réinitialise le masque si aucun chevauchement
+        vinylTitle.style.setProperty('--clip-path', 'inset(0 100% 0 0)');
+    }
+}
+
+// Appliquer au chargement, défilement et redimensionnement
+window.addEventListener('scroll', adjustClipPath);
+window.addEventListener('resize', adjustClipPath);
+adjustClipPath();
+
+
+

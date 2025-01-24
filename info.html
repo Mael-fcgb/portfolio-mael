@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster</title>
+    <title>Packshot</title>
 
     <link rel="stylesheet" href="./src/stylesheet/reset.css">
     <link rel="stylesheet" href="./src/stylesheet/vinyle.css">
@@ -12,30 +12,75 @@
 </head>
 
 <body>
+    <a href="index.html" class="bouton-accueil">Accueil</a>
+    <a href="#" class="bouton-retour"onclick="history.back(); return false;"><</a>
     <main>
         <div class="horizontal-line"></div>
-        <section class="vinyl">
+        <section class="project">
             <div class="container-text">
-                <h1 class="vinyl-title">
-                    INFOGRAPHIE/
-                </h1>
-                <div class="description">DESCRIPTION/</div>
-                <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur dolor eu
-                    lorem tincidunt, sed aliquet ex volutpat. Duis congue, risus vel faucibus placerat, magna tortor
-                    porttitor eros, vel pellentesque ex velit sed dolor. Vivamus fermentum nunc felis, in congue metus
-                    aliquet non. Nam congue dui eu mi molestie efficitur. Fusce commodo finibus arcu vitae facilisis.
+                <h1>INFOGRAPHIE/</h1>
+                <div class="container-description">
+                    <h2>DESCRIPTION/</h2>
+                    <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur dolor
+                        eu
+                        lorem tincidunt, sed aliquet ex volutpat. Duis congue, risus vel faucibus placerat, magna tortor
+                        porttitor eros, vel pellentesque ex velit sed dolor. Vivamus fermentum nunc felis, in congue
+                        metus
+                        aliquet non. Nam congue dui eu mi molestie efficitur. Fusce commodo finibus arcu vitae
+                        facilisis.
+                    </p>
                 </div>
-            </div>
-            <img id="photoVinyl" class="photo-vinyl" src="/src/images/Infographie.png">
-
+            </div> 
+            <img src="/src/images/Infographie.png" class="project-photo"> 
+            
         </section>
+        <div class="horizontal-line2"></div>
+        <section class="other-photos">
+            <img src="/src/images/version-final-tag.png" class="project-photo2"> 
+            <img src="/src/images/illustration-théorie.png" class="project-photo2">
+        </section> 
+        <div class="popup">
+            <div class="popup-content">
+                <span id="closePopup">X</span>
+                <img src="" alt="">
+            </div>
+        </div>
+        <script>
+            const images = document.querySelectorAll('.project-photo2'); // Sélectionne toutes les images
+            const popup = document.querySelector('.popup'); // La popup
+            const popupImage = document.querySelector('.popup-content img'); // L'image dans la popup
+            const closePopup = document.getElementById('closePopup'); // Bouton pour fermer
+        
+            // Quand on clique sur une image
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    popup.style.display = 'flex'; // Affiche la popup
+                    popupImage.src = image.src; // Définit la source de l'image cliquée
+                });
+            });
+        
+            // Quand on clique sur la croix
+            closePopup.addEventListener('click', () => {
+                popup.style.display = 'none'; // Cache la popup
+            });
+        
+            // Quand on clique en dehors de l'image
+            popup.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none'; // Cache la popup
+                }
+            });
+        </script>
+        
         <div class="horizontal-line2"></div>
         <footer class="footer">
             © 2025 maël larue · dev par thomas riquier et maël larue
         </footer>
+        <script src="./src/stylesheet/script.js"></script>
     </main>
 
-
+    
 </body>
 
 </html>
+

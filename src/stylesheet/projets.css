@@ -9,14 +9,17 @@
 
 .bouton-accueil {
     font-family: 'Manrope';
-    font-size: 40px;
+    font-size: 35px;
     color: black; /* Couleur par défaut */
     text-decoration: none; /* Retire le soulignement natif */
     position: fixed; /* Fixé en haut à gauche */
-    top: 20px; /* Distance par rapport au haut de la page */
-    left: 120px; /* Distance par rapport au bord gauche */
+    top: 25px; /* Distance par rapport au haut de la page */
+    left: 130px; /* Distance par rapport au bord gauche */
     z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
     transition: color 0.3s ease; /* Transition douce pour le survol */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+    opacity: 1; /* Par défaut visible */
+    transform: translateY(0); /* Position initiale */
 }
 
 .bouton-accueil:hover {
@@ -93,7 +96,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 350px;
+    padding-bottom: 250px;
 }
 
 .photo-vinyl {
@@ -123,35 +126,32 @@ h1 {
 }
 
 
+
+
 .poster {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 450px;
+    padding-bottom: 250px;
 }
 
 .photo-poster {
-    display: flex;
-    position: absolute;
+    position: relative;
     width: 510px;
     height: 637.5px;
     padding-top: 300px;
-    padding-left: 400px;
-    opacity: 100;
     transform: rotate(15deg);
-    transition: opacity 0.5s ease-out;
     z-index: 1;
     justify-content: center;
 }
 
 
 .poster-title {
-    padding-top: 650px;
-    padding-right: 650px;
+    margin-top: 650px;
     font-size: 12Opx;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
-    color: black;
+    color: rgb(65, 65, 65);
     display: inline-block;
     z-index: 2;
     justify-content: center;
@@ -161,7 +161,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 450px;
+    padding-bottom: 250px;
 }
 
 .photo-info {
@@ -227,4 +227,14 @@ h1 {
 .buton:hover::after {
     width: 100%;
 
+}
+
+
+
+
+
+.poster .poster-title{
+    position: relative;
+    mix-blend-mode:difference;
+    z-index: 2;
 }

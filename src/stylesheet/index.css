@@ -264,3 +264,10 @@ body::after {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+
+
+.cv{
+    width: 50%;
+    margin-left: 25%;
+}

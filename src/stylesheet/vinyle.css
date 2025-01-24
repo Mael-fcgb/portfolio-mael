@@ -8,6 +8,48 @@
     src: url(/src/fonts/Manrope-Light.ttf);
 }
 
+@font-face {
+    font-family: 'Manrope';
+    src: url(/src/fonts/Manrope-ExtraLight.ttf);
+}
+
+
+.bouton-accueil {
+    font-family: 'Manrope';
+    font-size: 35px;
+    color: black; /* Couleur par défaut */
+    text-decoration: none; /* Retire le soulignement natif */
+    position: fixed; /* Fixé en haut à gauche */
+    top: 25px; /* Distance par rapport au haut de la page */
+    left: 8vw; /* Distance par rapport au bord gauche */
+    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+    opacity: 1; /* Par défaut visible */
+    transform: translateY(0); /* Position initiale */
+}
+
+.bouton-accueil:hover {
+    color: gray; /* Change de couleur au survol */
+    cursor: pointer; /* Montre que c'est cliquable */
+}
+
+.bouton-retour{
+    font-family: 'Manrope';
+    font-size: 45px;
+    color: black; /* Couleur par défaut */
+    text-decoration: none; /* Retire le soulignement natif */
+    position: fixed; /* Fixé en haut à gauche */
+    top: 18px; /* Distance par rapport au haut de la page */
+    left: 2vw; /* Distance par rapport au bord gauche */
+    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+    opacity: 1; /* Par défaut visible */
+    transform: translateY(0); /* Position initiale */
+}
+
+
 body::before,
 body::after {
     content: '';
@@ -61,7 +103,7 @@ body::after {
     flex-direction: row;
     justify-content: center;
     padding: 0 8vw;
-    padding-bottom: 500px;
+    padding-bottom: 100px;
 
 }
 
@@ -76,6 +118,34 @@ body::after {
     z-index: 1;
     padding-left: 4vw;
 }
+
+.project-photo2 {
+    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 30%; /* Utilisation de pourcentage pour une meilleure responsivité */
+    max-width: 480px; /* Largeur maximale pour limiter les dimensions */
+    margin: 0 10px; /* Espacement horizontal entre les images */
+    transition: transform 0.3s ease, opacity 0.5s ease-out;
+}
+
+.project-photo2:hover {
+    transform: scale(1.05); /* Effet zoom au survol */
+    cursor: pointer;
+    opacity: 0.9; /* Léger effet de transparence */
+}
+
+.other-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrage des images */
+    align-items: center; /* Alignement vertical */
+    gap: 20px; /* Espacement entre les images */
+    padding: 50px 0; /* Marge verticale pour aérer la section */
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+}
+
 
 h1 {
     padding-top: 300px;
@@ -105,4 +175,49 @@ h2 {
 
 .container-description {
     margin-left: 5vw;
+}
+
+
+.other-photos{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Popup */
+
+.popup {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90dvh;
+}
+
+.popup-content img {
+    max-width: 90vw;
+    max-height: 90dvh;
+    display: block;
+    border-radius: 5px;
+}
+
+#closePopup {
+    position: absolute;
+    top: 0px;
+    right: -80px;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-family: 'Manrope-Light';
+    font-size: 40px;
+    cursor: pointer;
 }
