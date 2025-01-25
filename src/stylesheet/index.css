@@ -29,9 +29,7 @@ html {
 
 body {
     transition: background-color 0.7s ease;
-    /* Douce transition pour le fond */
     background-color: white;
-    /* Fond par défaut */
 }
 
 .main-content {

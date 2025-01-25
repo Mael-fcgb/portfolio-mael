@@ -18,36 +18,113 @@
     src: url(/src/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.otf);
 }
 
-.italic{
-    font-family: 'Roslindale-Italic';
+
+.button{
+    font-family: 'Roslindale-Extra-Light';
+    display: flex;
+    margin-top: 6vw;
+    margin-left: 17vw;
+    font-size: 3em;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    width: fit-content;
 }
 
+.button {
+    transition: color 0.3s ease;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Ligne cachée par défaut */
+    height: 1px;
+    /* Épaisseur de la ligne */
+    background-color: #000000;
+    /* Couleur de la ligne */
+    transition: width 0.3s ease;
+}
+
+.button:hover::after {
+    width: 100%;
+
+}
 
 .de-dos-photo{
-    width: 40%;
-    margin-top: 200px;
+    width: 590px;
+    height: 856px;
+    margin-top: 40px;
 }
 
 .citation{
     text-transform: uppercase;
-    padding-top: 300px;
-    font-size: 108px;
+    padding-top: 20px;
+    font-size: 5.8em;
+    margin-left: 60px;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
     color: black;
     display: flex;
+    line-height: 81.3px;
+    z-index: 2;
+
+}
+
+
+.citation2{
+    text-transform: uppercase;
+    padding-top: 50px;
+    font-size: 5.8em;
+    font-family: 'Roslindale-Extra-Light';
+    position: relative;
+    color: black;
+    display: flex;
+    line-height: 81.3px;
+    z-index: 2;
+
+}
+
+.citation3{
+    text-transform: uppercase;
+    padding-top: 50px;
+    font-size: 5.8em;
+    font-family: 'Roslindale-Extra-Light';
+    position: relative;
+    color: black;
+    display: flex;
+    line-height: 81.3px;
+    z-index: 2;
+
+}
+
+.citation4{
+    text-transform: uppercase;
+    padding-top: 50px;
+    font-size: 5.8em;
+    margin-left: 70px;
+    font-family: 'Roslindale-Extra-Light';
+    position: relative;
+    color: black;
+    display: flex;
+    line-height: 81.3px;
     z-index: 2;
 
 }
 
 .body-text {
     font-family: 'Manrope-Light';
-    text-wrap: wrap;
-    width: 65%;
-    font-size: 22px;
+    position: relative;
+    font-size: 2em;
+    max-width: 70%;
     letter-spacing: 3px;
-    line-height: 1.4em;
-    padding-top: 2vw;
+    line-height: 1.6em;
+    padding-top: 4vw;
+    margin-right: 100px;
 }
 
 
@@ -57,6 +134,7 @@
     justify-content: center;
     padding: 0 8vw;
     padding-bottom: 100px;
+    padding-top: 200px;
 
 }
 
@@ -124,4 +202,45 @@
     transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
     opacity: 1; /* Par défaut visible */
     transform: translateY(0); /* Position initiale */
+}
+
+
+.first-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 90px;
+}
+
+.star1{
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+}
+
+.star2{
+    width: 80px;
+    height: 80px;
+    padding-top: 50px;
+}
+
+.second-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+}
+
+.arrow{
+    width: 52px;
+    height: 38px;
+    width: fit-content;
+    margin-top: 5.8vw;
 }
