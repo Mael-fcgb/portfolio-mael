@@ -151,7 +151,7 @@ h1 {
     font-size: 12Opx;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
-    color: rgb(65, 65, 65);
+    color: rgb(0, 0, 0);
     display: inline-block;
     z-index: 2;
     justify-content: center;
@@ -235,6 +235,5 @@ h1 {
 
 .poster .poster-title{
     position: relative;
-    mix-blend-mode:difference;
     z-index: 2;
 }
