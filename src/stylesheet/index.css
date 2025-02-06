@@ -27,6 +27,28 @@ html {
     src: url(/src/fonts/Manrope-Light.ttf);
 }
 
+@font-face {
+    font-family: 'Manrope-regular';
+    src: url(/src/fonts/Manrope-Regular.ttf);
+}
+
+.prénom{
+    font-family: 'Roslindale';
+}
+
+.nom-famille{
+    font-family: 'Roslindale';
+}
+
+
+.horizontal-line4 {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #959595;
+    z-index: 10;
+}
+
 body {
     transition: background-color 0.7s ease;
     background-color: white;
@@ -181,7 +203,7 @@ h2 {
 
 .job {
     font-family: 'Manrope-Light';
-    color: #b7b7b7;
+    color: #cacaca;
     font-size: 96px;
     display: flex;
     justify-content: center;
@@ -195,6 +217,7 @@ h2 {
 
 .job-list {
     padding-top: 350px;
+    padding-bottom: 350px;
 }
 
 body::before,
@@ -250,15 +273,19 @@ body::after {
 .img-bridge {
     position: relative;
     width: 100%;
-    padding-top: 300px;
+    padding-top: 200px;
     z-index: 11;
 }
 
 .footer {
     font-family: 'Manrope';
+    color: #ebebeb;
     font-size: 25px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -269,3 +296,101 @@ body::after {
     width: 50%;
     margin-left: 25%;
 }
+
+.contact{
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.contact-title{
+    color: #ffffff;
+}
+
+
+.mail{
+    font-family: 'Manrope-regular';
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 50px;
+    margin-left: 15vw;
+    margin-top: 200px;
+    width: fit-content;
+}
+
+.phone{
+    font-family: 'Manrope-regular';
+    color: #ebebeb;
+    font-size: 50px;
+    margin-left: 15vw;
+    padding-top: 100px;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px; /* Taille ajustable */
+    height: 10px;
+    background-color: white; /* Couleur du curseur */
+    border-radius: 50%;
+    pointer-events: none; /* Évite qu'il bloque les clics */
+    z-index: 10000;
+    mix-blend-mode: difference; /* Effet visible sur fond sombre */
+    transition: transform 0.1s ease-out; /* Animation fluide */
+}
+
+.custom-cursor span {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 14px;
+    color: white;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+body:hover .custom-cursor span {
+    opacity: 1; /* Affiche le texte au survol */
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 20px;
+        overflow: hidden; /* Bloque le scroll */
+    }
+
+    body > *:not(.message-responsive) {
+        display: none !important; /* Cache tout sauf le message */
+    }
+
+    .message-responsive {
+        display: block;
+        font-family: 'Roslindale-Extra-Light';
+        max-width: 50%;
+        font-size: 38px;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .message-responsive {
+        display: none; /* Cache le message sur grand écran */
+    }
+}
+
+

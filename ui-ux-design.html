@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSBA</title>
+
+    <link rel="stylesheet" href="./src/stylesheet/reset.css">
+    <link rel="stylesheet" href="./src/stylesheet/vinyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+</head>
+
+<body>
+    <a href="index.html" class="bouton-accueil">Accueil</a>
+    <a href="#" class="bouton-retour"onclick="history.back(); return false;"><</a>
+    <main>
+        <div class="horizontal-line"></div>
+        <section class="project">
+            <div class="container-text">
+                <h1>MUSBA/</h1>
+                <div class="container-description">
+                    <h2>DESCRIPTION/</h2>
+                    <p class="body-text">
+                        Pendant une semaine dans notre BUT MMI Bordeaux, avec Baptiste Louis, Lorenzo Le Ro-ho, Tom Detaevernier et Lola Dupuy nous avions pour objectif de refaire totalement un site internet existant.<br><br>L'atelier, dirigé par Anthony Ferretti et Alexis BENOIT, avait pour but de nous apprendre à réaliser une maquette de site web, notre groupe s'est vu attribué le site du MusBA Bordeaux (le musée des beaux arts).<br><br>Pour touver une direction artistique à l'image du musée, on s'est inspiré du travail de l'entreprise Alt-Border. Ils avaient réalisé une chartre graphique assez originale.<br><br>Voici donc la maquette que l'on a realisé durant cette semaine. 
+                    </p>
+                </div>
+            </div> 
+            <img src="/src/images/Musba-exterieur.JPG" class="project-photo"> 
+            
+        </section>
+        <div class="horizontal-line2"></div>
+        <section class="other-photos">
+            <img src="/src/images/Musba.png" class="Musba">
+        </section> 
+        <div class="popup">
+            <div class="popup-content">
+                <span id="closePopup">X</span>
+                <img src="" alt="">
+            </div>
+        </div>
+        <script>
+            const images = document.querySelectorAll('.project-photo2'); // Sélectionne toutes les images
+            const popup = document.querySelector('.popup'); // La popup
+            const popupImage = document.querySelector('.popup-content img'); // L'image dans la popup
+            const closePopup = document.getElementById('closePopup'); // Bouton pour fermer
+        
+            // Quand on clique sur une image
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    popup.style.display = 'flex'; // Affiche la popup
+                    popupImage.src = image.src; // Définit la source de l'image cliquée
+                });
+            });
+        
+            // Quand on clique sur la croix
+            closePopup.addEventListener('click', () => {
+                popup.style.display = 'none'; // Cache la popup
+            });
+        
+            // Quand on clique en dehors de l'image
+            popup.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none'; // Cache la popup
+                }
+            });
+        </script>
+        
+        <div class="horizontal-line2"></div>
+        <footer class="footer">
+            © 2025 maël larue · dev par thomas riquier et maël larue
+        </footer>
+        <script src="./src/stylesheet/script.js"></script>
+    </main>
+
+    
+</body>
+
+</html>
+

@@ -108,11 +108,10 @@ body::after {
 }
 
 .project-photo {
-    object-fit: cover;
     display: flex;
-    flex-direction: row;
     position: relative;
-    width: 480px;
+    width: 35%;
+    height:100%;
     padding-top: 300px;
     transition: opacity 0.5s ease-out;
     z-index: 1;
@@ -124,9 +123,9 @@ body::after {
     display: flex;
     flex-direction: row;
     position: relative;
-    width: 30%; /* Utilisation de pourcentage pour une meilleure responsivité */
-    max-width: 480px; /* Largeur maximale pour limiter les dimensions */
-    margin: 0 10px; /* Espacement horizontal entre les images */
+    width: 30%; 
+    max-width: 480px; 
+    margin: 0 10px; 
     transition: transform 0.3s ease, opacity 0.5s ease-out;
 }
 
@@ -166,7 +165,7 @@ h2 {
 .body-text {
     font-family: 'Manrope-Light';
     text-wrap: wrap;
-    width: 65%;
+    width: 73%;
     font-size: 22px;
     letter-spacing: 3px;
     line-height: 1.4em;
@@ -220,4 +219,10 @@ h2 {
     font-family: 'Manrope-Light';
     font-size: 40px;
     cursor: pointer;
+}
+
+
+.Musba{
+    width: 60%;
+    align-items: center;
 }

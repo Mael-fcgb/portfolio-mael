@@ -1,15 +1,25 @@
 document.addEventListener("scroll", () => {
-  const navigation = document.querySelector(".naviguation"); // Sélectionne la bonne classe
+    const navigation = document.querySelector(".naviguation");
+    const contact = document.querySelector(".contact");
 
-  if (navigation) {
-      const rect = navigation.getBoundingClientRect();
+    let isNavigationVisible = false;
+    let isContactVisible = false;
 
-      if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
-          document.body.style.backgroundColor = "black"; // Applique le fond noir
-      } else {
-          document.body.style.backgroundColor = "white"; // Applique le fond blanc
-      }
-  }
+    if (navigation) {
+        const rectNav = navigation.getBoundingClientRect();
+        isNavigationVisible = rectNav.top <= window.innerHeight / 2 && rectNav.bottom >= 30;
+    }
+
+    if (contact) {
+        const rectContact = contact.getBoundingClientRect();
+        isContactVisible = rectContact.top <= window.innerHeight / 2 && rectContact.bottom >= 30;
+    }
+
+    if (isNavigationVisible || isContactVisible) {
+        document.body.style.backgroundColor = "black";
+    } else {
+        document.body.style.backgroundColor = "white";
+    }
 });
 
 let targetScroll = window.scrollY; // Position cible du défilement
@@ -143,3 +153,49 @@ adjustClipPath();
 
 
 
+
+
+const cursor = document.querySelector(".custom-cursor");
+const cursorText = cursor.querySelector("span");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+});
+
+document.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "1";
+});
+
+document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+});
+
+// Optionnel : Afficher du texte contextuel
+document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+        cursorText.innerText = "Comptez-moi"; // Texte affiché
+        cursorText.style.opacity = "1";
+    });
+
+    element.addEventListener("mouseleave", () => {
+        cursorText.innerText = "";
+        cursorText.style.opacity = "0";
+    });
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navContact = document.querySelector(".naviguation a[href='#contact']");
+    const contactSection = document.querySelector("#contact");
+
+    if (navContact && contactSection) {
+        navContact.addEventListener("click", (event) => {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+            contactSection.scrollIntoView({ behavior: "smooth" }); // Défilement fluide
+        });
+    }
+});
