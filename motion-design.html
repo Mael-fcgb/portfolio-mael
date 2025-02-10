@@ -13,7 +13,7 @@
 
 <body>
     <a href="index.html" class="bouton-accueil">Accueil</a>
-    <a href="#" class="bouton-retour"onclick="history.back(); return false;"><</a>
+    <a href="#" class="bouton-retour" onclick="history.back(); return false;">&lt;</a>
     <main>
         <div class="horizontal-line"></div>
         <section class="project">
@@ -27,19 +27,13 @@
                     </p>
                 </div>
             </div> 
-            <img src="/src/images/mood-board.png" class="project-photo"> 
+            <img src="/src/images/mood-board.png" class="project-photo" alt="mood-board"> 
             
         </section>
         <div class="horizontal-line2"></div>
-        <section class="other-photos">
-            <iframe width="1220" height="686" src="https://www.youtube.com/embed/gcJhCdn3ntk" title="Le médium est le message - Motion Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section> 
-        <div class="popup">
-            <div class="popup-content">
-                <span id="closePopup">X</span>
-                <img src="" alt="">
-            </div>
-        </div>
+        <div class="other-photos">
+            <iframe width="1220" height="686" src="https://www.youtube.com/embed/gcJhCdn3ntk" title="Le médium est le message - Motion Design"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> 
         <script>
             const images = document.querySelectorAll('.project-photo2'); // Sélectionne toutes les images
             const popup = document.querySelector('.popup'); // La popup
