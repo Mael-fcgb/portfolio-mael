@@ -1,6 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
 
 @font-face {
     font-family: 'Roslindale';
@@ -14,7 +11,7 @@ html {
 
 @font-face {
     font-family: 'Roslindale-Italic';
-    src: url(/src/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.otf)
+    src: url(/src/fonts/Roslindale-DisplayCondensedLightItalic-Testing.otf)
 }
 
 @font-face {
