@@ -1,3 +1,18 @@
+
+
+// Initialize Lenis
+const lenis = new Lenis({
+    autoRaf: true,
+  });
+  
+  // Listen for the scroll event and log the event data
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
+
+
+
+
 document.addEventListener("scroll", () => {
     const navigation = document.querySelector(".naviguation");
     const contact = document.querySelector(".contact");
@@ -21,37 +36,6 @@ document.addEventListener("scroll", () => {
         document.body.style.backgroundColor = "white";
     }
 });
-
-let targetScroll = window.scrollY; // Position cible du défilement
-let currentScroll = window.scrollY; // Position actuelle
-let scrollSpeed = 12; // Ajuste pour contrôler la fluidité (plus bas = plus lent)
-
-function smoothScroll() {
-    // Interpolation progressive
-    currentScroll += (targetScroll - currentScroll) * scrollSpeed;
-
-    // Applique la position lissée
-    window.scrollTo(0, currentScroll);
-
-    // Continue l'animation tant que la différence est significative
-    if (Math.abs(targetScroll - currentScroll) > 0.5) {
-        requestAnimationFrame(smoothScroll);
-    }
-}
-
-// Écouteur pour capturer le défilement
-window.addEventListener('wheel', (event) => {
-    targetScroll += event.deltaY; // Mise à jour de la position cible
-    if (!scrolling) {
-        requestAnimationFrame(smoothScroll);
-    }
-});
-
-// Écouteur pour interactions tactiles ou clavier
-window.addEventListener('scroll', () => {
-    targetScroll = window.scrollY; // Synchronise la position cible avec les autres interactions
-});
-
 
 
 
