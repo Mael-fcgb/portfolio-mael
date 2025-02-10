@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./src/stylesheet/reset.css">
     <link rel="stylesheet" href="./src/stylesheet/vinyle.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <!-- CDN -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 </head>
 
 <body>
@@ -21,19 +25,24 @@
                 <h1>DIABOLO MENTHE/</h1>
                 <div class="container-description">
                     <h2>DESCRIPTION/</h2>
-                    <p class="body-text">Durant la semaine du 30/09/24 au 04/10/24, Lucas Marsalle est venu organiser un atelier autour de la photo à l'IUT Bordeaux Montaigne. Avec mon groupe composé de Anis Abdallah, Mathis Duclos, Leon Carter, Léane Alletru et Zhanna Ivanenko.<br><br>Nous avons été à la rencontre des vendeurs de la boutique Diabolo Menthe sur Bordeaux. C'est un disquaire qui propose des vinyles d'occasion à prix réduit.<br><br>Ils ont accepté de nous en préter quelques uns pour réaliser un packshot. Voici les photos que nous avons donc réalisé.
+                    <p class="body-text">Durant la semaine du 30/09/24 au 04/10/24, Lucas Marsalle est venu organiser un
+                        atelier autour de la photo à l'IUT Bordeaux Montaigne. Avec mon groupe composé de Anis Abdallah,
+                        Mathis Duclos, Leon Carter, Léane Alletru et Zhanna Ivanenko.<br><br>Nous avons été à la
+                        rencontre des vendeurs de la boutique Diabolo Menthe sur Bordeaux. C'est un disquaire qui
+                        propose des vinyles d'occasion à prix réduit.<br><br>Ils ont accepté de nous en préter quelques
+                        uns pour réaliser un packshot. Voici les photos que nous avons donc réalisé.
                     </p>
                 </div>
-            </div> 
-            <img src="/src/images/1728463058333.webp" class="project-photo" alt="photo vinyle"> 
-            
+            </div>
+            <img src="/src/images/1728463058333.webp" class="project-photo" alt="photo vinyle">
+
         </section>
         <div class="horizontal-line2"></div>
         <div class="other-photos">
-            <img src="/src/images/anis-vinyl-cadré.webp" class="project-photo2" alt="photo vinyle"> 
+            <img src="/src/images/anis-vinyl-cadré.webp" class="project-photo2" alt="photo vinyle">
             <img src="/src/images/vinyles.webp" class="project-photo2" alt="photo vinyle">
             <img src="/src/images/Mael_vinyle.webp" class="project-photo2" alt="photo vinyle">
-        </div> 
+        </div>
         <div class="popup">
             <div class="popup-content">
                 <span id="closePopup">X</span>
@@ -45,7 +54,7 @@
             const popup = document.querySelector('.popup'); // La popup
             const popupImage = document.querySelector('.popup-content img'); // L'image dans la popup
             const closePopup = document.getElementById('closePopup'); // Bouton pour fermer
-        
+
             // Quand on clique sur une image
             images.forEach(image => {
                 image.addEventListener('click', () => {
@@ -53,12 +62,12 @@
                     popupImage.src = image.src; // Définit la source de l'image cliquée
                 });
             });
-        
+
             // Quand on clique sur la croix
             closePopup.addEventListener('click', () => {
                 popup.style.display = 'none'; // Cache la popup
             });
-        
+
             // Quand on clique en dehors de l'image
             popup.addEventListener('click', (event) => {
                 if (event.target === popup) {
@@ -66,7 +75,7 @@
                 }
             });
         </script>
-        
+
         <div class="horizontal-line2"></div>
         <footer class="footer">
             © 2025 maël larue · dev par thomas riquier et maël larue
@@ -74,8 +83,7 @@
         <script src="./src/stylesheet/script.js"></script>
     </main>
 
-    
+
 </body>
 
 </html>
-

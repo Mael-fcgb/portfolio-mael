@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./src/stylesheet/reset.css">
     <link rel="stylesheet" href="./src/stylesheet/vinyle.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+    <!-- CDN -->
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
 </head>
 
 <body>
@@ -21,25 +25,33 @@
                 <h1>LE MÉDIUM EST<br>LE MESSAGE/</h1>
                 <div class="container-description">
                     <h2>DESCRIPTION/</h2>
-                    <p class="body-text">Durant une semaine intense en BUT MMI, j'ai eu l'opportunité de collaborer avec Charlotte Duconseil sur un projet passionnant : la création d'une animation d'une minute autour de la célèbre théorie de Marshall McLuhan, "Le médium est le message". <br><br>
-                        Ce projet m'a permis de développer mes compétences en storytelling visuel et d'explorer les subtilités du motion design.<br><br>
-                        Une expérience enrichissante, qui confirme mon intérêt pour le design animé et la communication visuelle. Un grand merci à Charlotte pour cette belle collaboration et à Émilien Gillet pour son encadrement !
+                    <p class="body-text">Durant une semaine intense en BUT MMI, j'ai eu l'opportunité de collaborer avec
+                        Charlotte Duconseil sur un projet passionnant : la création d'une animation d'une minute autour
+                        de la célèbre théorie de Marshall McLuhan, "Le médium est le message". <br><br>
+                        Ce projet m'a permis de développer mes compétences en storytelling visuel et d'explorer les
+                        subtilités du motion design.<br><br>
+                        Une expérience enrichissante, qui confirme mon intérêt pour le design animé et la communication
+                        visuelle. Un grand merci à Charlotte pour cette belle collaboration et à Émilien Gillet pour son
+                        encadrement !
                     </p>
                 </div>
-            </div> 
-            <img src="/src/images/mood-board.webp" class="project-photo" alt="mood-board"> 
-            
+            </div>
+            <img src="/src/images/mood-board.webp" class="project-photo" alt="mood-board">
+
         </section>
         <div class="horizontal-line2"></div>
         <div class="other-photos">
-            <iframe width="1220" height="686" src="https://www.youtube.com/embed/gcJhCdn3ntk" title="Le médium est le message - Motion Design"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div> 
+            <iframe width="1220" height="686" src="https://www.youtube.com/embed/gcJhCdn3ntk"
+                title="Le médium est le message - Motion Design"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <script>
             const images = document.querySelectorAll('.project-photo2'); // Sélectionne toutes les images
             const popup = document.querySelector('.popup'); // La popup
             const popupImage = document.querySelector('.popup-content img'); // L'image dans la popup
             const closePopup = document.getElementById('closePopup'); // Bouton pour fermer
-        
+
             // Quand on clique sur une image
             images.forEach(image => {
                 image.addEventListener('click', () => {
@@ -47,12 +59,12 @@
                     popupImage.src = image.src; // Définit la source de l'image cliquée
                 });
             });
-        
+
             // Quand on clique sur la croix
             closePopup.addEventListener('click', () => {
                 popup.style.display = 'none'; // Cache la popup
             });
-        
+
             // Quand on clique en dehors de l'image
             popup.addEventListener('click', (event) => {
                 if (event.target === popup) {
@@ -60,7 +72,7 @@
                 }
             });
         </script>
-        
+
         <div class="horizontal-line2"></div>
         <footer class="footer">
             © 2025 maël larue · dev par thomas riquier et maël larue
@@ -68,8 +80,7 @@
         <script src="./src/stylesheet/script.js"></script>
     </main>
 
-    
+
 </body>
 
 </html>
-
