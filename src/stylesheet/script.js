@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const video = document.getElementById("loader-video");
+
+  video.onended = () => {
+      loader.classList.add("hidden");
+      setTimeout(() => {
+          loader.style.display = "none";
+      }, 800);
+  };
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const lenis = new Lenis();
 
   function raf(time) {
