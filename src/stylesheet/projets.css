@@ -10,21 +10,21 @@
 .bouton-accueil {
     font-family: 'Manrope';
     font-size: 35px;
-    color: black; /* Couleur par défaut */
-    text-decoration: none; /* Retire le soulignement natif */
-    position: fixed; /* Fixé en haut à gauche */
-    top: 25px; /* Distance par rapport au haut de la page */
-    left: 130px; /* Distance par rapport au bord gauche */
-    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
-    transition: color 0.3s ease; /* Transition douce pour le survol */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
-    opacity: 1; /* Par défaut visible */
-    transform: translateY(0); /* Position initiale */
+    color: black; 
+    text-decoration: none; 
+    position: fixed; 
+    top: 25px; 
+    left: 130px; 
+    z-index: 100; 
+    transition: color 0.3s ease; 
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 .bouton-accueil:hover {
-    color: gray; /* Change de couleur au survol */
-    cursor: pointer; /* Montre que c'est cliquable */
+    color: gray;
+    cursor: pointer; 
 }
 
 
@@ -229,11 +229,79 @@ h1 {
 
 }
 
-
-
-
-
 .poster .poster-title{
     position: relative;
     z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+    .bouton-accueil {
+        font-size: 30px;
+        position: relative; 
+        text-align: center;
+        display: flex;
+        top: Opx;
+        left: 0px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    body::before {
+        left: 6vw;
+    }
+
+    body::after {
+        right: 6vw;
+    }
+
+
+    .horizontal-line {
+        top: 80px;
+    }
+
+    .horizontal-line2 {
+        bottom: 40px;
+    }
+
+    .info {
+        flex-direction: column;
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+
+    .photo-info {
+        width: 70%;
+        height: auto;
+        padding-top: 50px;
+        padding-left: 0px;
+        transform: rotate(0deg);
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-title {
+        padding-top: 0px;
+        padding-right: 0px;
+        font-size: 50px;
+        
+    }
+
+    .buton {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 30px;
+        width: auto;
+    }
+
+    .text-general {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
 }

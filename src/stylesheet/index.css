@@ -123,7 +123,7 @@ h1 span {
 .main-img {
     position: absolute;
     z-index: 1;
-    bottom: 80px;
+    bottom: 0px;
     width: 572px;
     height: 717px;
 }
@@ -133,7 +133,8 @@ h1 span {
 
 /* Naviguation */
 .naviguation {
-    padding: 100px 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
 }
 
@@ -246,7 +247,7 @@ h2 {
 }
 
 .job-list {
-    padding-top: 350px;
+    padding-top: 150px;
     padding-bottom: 350px;
 }
 
@@ -282,7 +283,7 @@ body::after {
 
 .horizontal-line2 {
     position: absolute;
-    bottom: 80px;
+    bottom: 0px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -436,7 +437,7 @@ body:hover .custom-cursor span {
 
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1200px) {
 
     /* hero */
     h1 {
@@ -475,9 +476,80 @@ body:hover .custom-cursor span {
         bottom: 40px;
     }
 
-    .text-main{
+    .text-main {
         gap: 24px;
         margin-top: -200px;
+    }
+
+    .naviguation {
+        padding: 50px;
+
+    }
+
+    .naviguation nav ul {
+        gap: 24px;
+        font-size: 40px;
+        padding-right: 0px;
+    }
+
+    .naviguation nav ul li a {
+        text-align: center;
+        display: flex;
+    }
+
+    .naviguation nav ul li a::after {
+        height: 0px;
+    }
+
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        padding-left: 0px;
+    }
+
+    .job {
+        font-size: 32px;
+        padding-top: 50px;
+    }
+
+    .job-list {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .footer {
+        text-align: center;
+        max-width: 75%;
+        min-width: 25%;
+        font-size: 16px;
+        gap: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .contact {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .mail {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 70px;
+        width: fit-content;
+        max-width: 10%;
+    }
+
+    .phone {
+        font-size: 16px;
+        padding-top: 70px;
+    }
+
+
+    .img-bridge {
+        padding-top: 50px;
     }
 
 }
