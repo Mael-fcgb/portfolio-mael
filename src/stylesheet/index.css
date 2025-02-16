@@ -501,6 +501,10 @@ body:hover .custom-cursor span {
         height: 0px;
     }
 
+    .arrow-effect{
+        display: none;
+    }
+
 
     h2 {
         text-align: center;
@@ -521,12 +525,12 @@ body:hover .custom-cursor span {
 
     .footer {
         text-align: center;
-        max-width: 75%;
-        min-width: 25%;
         font-size: 16px;
         gap: 30px;
         padding-top: 30px;
         padding-bottom: 30px;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 
     .contact {
@@ -551,5 +555,7 @@ body:hover .custom-cursor span {
     .img-bridge {
         padding-top: 50px;
     }
+
+
 
 }
