@@ -226,3 +226,52 @@ h2 {
     width: 60%;
     align-items: center;
 }
+
+@media screen and (max-width: 1200px) {
+    .bouton-accueil {
+        font-size: 30px;
+        position: relative; 
+        text-align: center;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        margin-top: 7vw;
+        justify-content: center;
+    }
+
+    .project{
+        flex-direction: column;
+    }
+
+    .project-photo{
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 25%;
+        position: relative;
+        width: 80%;
+        height: auto;
+        opacity: 100%;
+    }
+
+    h1{
+        font-size: 60px;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .body-text {
+        width: 90%;
+        font-size: 22px;
+        letter-spacing: 3px;
+        line-height: 1.4em;
+        padding-top: 10vw;
+    }
+
+    .other-photos{
+        flex-direction: column;
+    }
+
+    .bouton-retour{
+        margin-left: 20px;
+    }
+}

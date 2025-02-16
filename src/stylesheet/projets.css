@@ -60,6 +60,7 @@ body::after {
 .horizontal-line2 {
     position: relative;
     width: 100%;
+    top: 86px;
     height: 1px;
     background-color: #959595;
     z-index: 10;
@@ -240,44 +241,45 @@ h1 {
         position: relative; 
         text-align: center;
         display: flex;
-        top: Opx;
+        top: 0px;
         left: 0px;
-        margin-top: 10px;
+        margin-top: 7vw;
         justify-content: center;
     }
 
     body::before {
-        left: 6vw;
+        left: 8vw;
     }
 
     body::after {
-        right: 6vw;
+        right: 8vw;
     }
 
-
-    .horizontal-line {
-        top: 80px;
-    }
 
     .horizontal-line2 {
-        bottom: 40px;
+        top: 8vw;
+        margin-bottom: 50px;
     }
 
     .info {
+        display: flex;
         flex-direction: column;
-        padding-top: 150px;
-        padding-bottom: 100px;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
     }
 
     .photo-info {
         width: 70%;
         height: auto;
-        padding-top: 50px;
-        padding-left: 0px;
-        transform: rotate(0deg);
         position: relative;
         justify-content: center;
+        padding-top: 50px;
+        padding-left: 15vw;
+        transform: rotate(0deg);
         align-items: center;
+
     }
 
     .info-title {
