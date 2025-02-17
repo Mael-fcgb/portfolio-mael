@@ -80,7 +80,8 @@ body {
     display: flex;
     position: relative;
     height: 100dvh;
-    min-height: 700px;
+    min-height: 920px;
+    max-height: 1050px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -446,13 +447,13 @@ body:hover .custom-cursor span {
         letter-spacing: 16px;
     }
 
-
     .subtitle {
         font-size: 24px;
         letter-spacing: 16px;
     }
 
     .main-img {
+        max-width: 472px;
         width: 90%;
         height: auto;
         bottom: 40px;
@@ -487,9 +488,9 @@ body:hover .custom-cursor span {
     }
 
     .naviguation nav ul {
-        gap: 24px;
+        gap: 32px;
         font-size: 40px;
-        padding-right: 0px;
+        padding-right: 40px;
     }
 
     .naviguation nav ul li a {
@@ -558,4 +559,29 @@ body:hover .custom-cursor span {
 
 
 
+}
+
+@media screen and (max-width: 418px) {
+    h1{
+        letter-spacing: 10px;
+        font-size: 38px;
+    }
+
+    .main-content{
+        min-height: 680px;
+    }
+
+    .main-img{
+        width: 80%;
+        height: auto;
+    }
+    .naviguation nav ul {
+        padding-right: 0px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 1000px){
+    h1{
+        font-size: 60px;
+    }
 }

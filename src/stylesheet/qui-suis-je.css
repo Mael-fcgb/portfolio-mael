@@ -19,11 +19,10 @@
 }
 
 
-.button{
+.button {
     font-family: 'Roslindale-Extra-Light';
     display: flex;
-    margin-top: 6vw;
-    margin-left: 17vw;
+    margin-left: 0vw;
     font-size: 2.5em;
     position: relative;
     text-transform: uppercase;
@@ -55,13 +54,17 @@
 
 }
 
-.de-dos-photo{
+.de-dos-photo {
     width: 590px;
     height: 856px;
     margin-top: 40px;
 }
-
-.citation{
+h1 span{
+    display: inline-flex;
+    align-items: center;
+    gap: 60px;
+}
+.citation {
     text-transform: uppercase;
     padding-top: 20px;
     font-size: 5.8em;
@@ -69,40 +72,36 @@
     font-family: 'Roslindale-Extra-Light';
     position: relative;
     color: black;
-    display: flex;
     line-height: 81.3px;
     z-index: 2;
-
 }
 
 
-.citation2{
+.citation2 {
     text-transform: uppercase;
     padding-top: 50px;
     font-size: 5.8em;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
     color: black;
-    display: flex;
     line-height: 81.3px;
     z-index: 2;
 
 }
 
-.citation3{
+.citation3 {
     text-transform: uppercase;
     padding-top: 50px;
     font-size: 5.8em;
     font-family: 'Roslindale-Extra-Light';
     position: relative;
     color: black;
-    display: flex;
     line-height: 81.3px;
     z-index: 2;
 
 }
 
-.citation4{
+.citation4 {
     text-transform: uppercase;
     padding-top: 50px;
     font-size: 5.8em;
@@ -110,7 +109,6 @@
     font-family: 'Roslindale-Extra-Light';
     position: relative;
     color: black;
-    display: flex;
     line-height: 81.3px;
     z-index: 2;
 
@@ -172,74 +170,188 @@
 .bouton-accueil {
     font-family: 'Manrope';
     font-size: 35px;
-    color: black; /* Couleur par défaut */
-    text-decoration: none; /* Retire le soulignement natif */
-    position: fixed; /* Fixé en haut à gauche */
-    top: 25px; /* Distance par rapport au haut de la page */
-    left: 8vw; /* Distance par rapport au bord gauche */
-    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
-    transition: color 0.3s ease; /* Transition douce pour le survol */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
-    opacity: 1; /* Par défaut visible */
-    transform: translateY(0); /* Position initiale */
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    top: 25px;
+    left: 8vw;
+    z-index: 100;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .bouton-accueil:hover {
-    color: gray; /* Change de couleur au survol */
-    cursor: pointer; /* Montre que c'est cliquable */
+    color: gray;
+    cursor: pointer;
 }
 
-.bouton-retour{
+.bouton-retour {
     font-family: 'Manrope';
     font-size: 45px;
-    color: black; /* Couleur par défaut */
-    text-decoration: none; /* Retire le soulignement natif */
-    position: fixed; /* Fixé en haut à gauche */
-    top: 18px; /* Distance par rapport au haut de la page */
-    left: 2vw; /* Distance par rapport au bord gauche */
-    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
-    transition: color 0.3s ease; /* Transition douce pour le survol */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
-    opacity: 1; /* Par défaut visible */
-    transform: translateY(0); /* Position initiale */
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    top: 18px;
+    left: 2vw;
+    z-index: 100;
+    transition: color 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
-.first-line{
+.first-line {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 90px;
 }
 
-.star1{
+.star1 {
     width: 80px;
     height: 80px;
-    padding-top: 20px;
 }
-
-.star2{
-    width: 80px;
-    height: 80px;
-    padding-top: 50px;
-}
-
-.second-line{
+.second-line {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 80px;
 }
 
-.button-container{
-    display: flex;
-    flex-direction: row;
+.button-container {
+    display: inline-flex;
     align-items: center;
-    gap: 1vw;
+    gap: 2vw;
+    margin-top: 48px;
 }
 
-.arrow{
+.arrow {
     width: 52px;
     height: 38px;
-    margin-top: 5.8vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .bouton-accueil {
+        font-size: 32px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        margin-top: 3.5vw;
+        justify-content: center;
+    }
+
+    .horizontal-line2 {
+        margin: 45px 0;
+        margin-bottom: 50px;
+    }
+
+    .bouton-retour {
+        margin-left: 20px;
+    }
+
+    .project {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .first-line {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .citation {
+        font-size: 50px;
+        margin-left: 0px;
+        padding-top: 0px;
+    }
+
+    .star1 {
+        width: 50px;
+        height: auto;
+    }
+
+    h1 span{
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .second-line {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .citation2 {
+        font-size: 50px;
+        margin-left: 0px;
+        padding-top: 0px;
+    }
+
+    .star2 {
+        width: 50px;
+        height: auto;
+        padding-top: 0px;
+    }
+
+    .citation3 {
+        font-size: 50px;
+        margin-left: 0px;
+        padding-top: 0px;
+    }
+
+    .citation4 {
+        justify-content: center;
+        font-size: 50px;
+        margin-left: 0px;
+        padding-top: 0px;
+    }
+
+    .body-text {
+        font-size: 24px;
+        width: 100%;
+        max-width: 700px;
+        letter-spacing: 3px;
+        line-height: 1.6em;
+        padding-top: 64px;
+        margin-right: 0px;
+    }
+
+    .button{
+        font-size: 2em;
+        width: fit-content;
+    }
+
+    .button-container{
+        width: fit-content;
+    }
+
+    .de-dos-photo {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        position: relative;
+        justify-content: center;
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width:500px) {
+    .arrow {
+        width: 40px;
+        height: 30px;
+    }
+    .citation{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .citation2 img{
+        display: none;
+    }
+    
 }
