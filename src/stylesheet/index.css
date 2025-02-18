@@ -397,6 +397,40 @@ body:hover .custom-cursor span {
     /* Affiche le texte au survol */
 }
 
+.buton {
+    font-family: 'Manrope-regular';
+    text-decoration: none;
+    color: #ebebeb;
+    font-size: 50px;
+    margin-left: 15vw;
+    margin-top: 200px;
+    width: fit-content;
+}
+
+.buton {
+    transition: color 0.3s ease;
+}
+
+.buton::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Ligne cachée par défaut */
+    height: 1px;
+    /* Épaisseur de la ligne */
+    background-color: #ffffff;
+    /* Couleur de la ligne */
+    transition: width 0.3s ease;
+}
+
+.buton:hover::after {
+    width: 100%;
+
+}
+
+
 @media screen and(min-width: 321px) and (max-width: 1200px) {
     body {
         background-color: rgb(255, 255, 255);
