@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Bruney';
+    src: url(/src/fonts/Bruney.otf);
+}
+
+@font-face {
+    font-family: 'Roslindale';
+    src: url(/src/fonts/Roslindale-DisplayExtraLight-Testing.otf);
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(/src/fonts/Manrope-ExtraLight.ttf);
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    padding: 0px 0;
+}
+
+h1 {
+    font-family: 'Roslindale';
+    font-size: 110px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Roslindale';
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bouton-retour{
+    font-family: 'Manrope';
+    font-size: 45px;
+    color: black; /* Couleur par défaut */
+    text-decoration: none; /* Retire le soulignement natif */
+    position: fixed; /* Fixé en haut à gauche */
+    top: 18px; /* Distance par rapport au haut de la page */
+    left: 2vw; /* Distance par rapport au bord gauche */
+    z-index: 100; /* S'assure que le bouton est au-dessus des autres éléments */
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+    opacity: 1; /* Par défaut visible */
+    transform: translateY(0); /* Position initiale */
+}
+
+
+.horizontal-line {
+    width: 100%;
+    height: 1px;
+    background-color: #959595;
+    margin: 40px 0;
+}
+
+
+.horizontal-line1 {
+    width: 100%;
+    height: 1px;
+    background-color: #959595;
+    margin: 100px 0;
+}
+

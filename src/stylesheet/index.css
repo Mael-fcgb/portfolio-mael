@@ -1,23 +1,8 @@
-#loader {
-    position: relative;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
 
-#loader video {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
 
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+@font-face {
+    font-family: 'Bruney';
+    src: url(/src/fonts/Bruney.otf);
 }
 
 @font-face {
@@ -309,20 +294,6 @@ body::after {
     z-index: 11;
 }
 
-.footer {
-    font-family: 'Manrope';
-    color: #ebebeb;
-    background-color: #000;
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 
 
 .cv {
@@ -341,17 +312,6 @@ body::after {
     color: #ffffff;
 }
 
-
-.mail {
-    font-family: 'Manrope-regular';
-    text-decoration: none;
-    color: #ebebeb;
-    font-size: 50px;
-    margin-left: 15vw;
-    margin-top: 200px;
-    width: fit-content;
-}
-
 .phone {
     font-family: 'Manrope-regular';
     color: #ebebeb;
@@ -360,42 +320,6 @@ body::after {
     padding-top: 100px;
 }
 
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10px;
-    /* Taille ajustable */
-    height: 10px;
-    background-color: white;
-    /* Couleur du curseur */
-    border-radius: 50%;
-    pointer-events: none;
-    /* Évite qu'il bloque les clics */
-    z-index: 10000;
-    mix-blend-mode: difference;
-    /* Effet visible sur fond sombre */
-    transition: transform 0.1s ease-out;
-    /* Animation fluide */
-}
-
-.custom-cursor span {
-    position: absolute;
-    white-space: nowrap;
-    font-size: 14px;
-    color: white;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-body:hover .custom-cursor span {
-    opacity: 1;
-    /* Affiche le texte au survol */
-}
 
 .buton {
     font-family: 'Manrope-regular';
@@ -405,11 +329,17 @@ body:hover .custom-cursor span {
     margin-left: 15vw;
     margin-top: 200px;
     width: fit-content;
-}
-
-.buton {
+    position: relative;
+    /* Nécessaire pour positionner le pseudo-élément */
+    display: inline-block;
+    /* Pour limiter l'effet à la taille du texte */
+    text-decoration: none;
+    /* Retire toute soulignement natif */
+    color: #ffffff;
+    /* Couleur du texte */
     transition: color 0.3s ease;
 }
+
 
 .buton::after {
     content: '';
@@ -426,8 +356,31 @@ body:hover .custom-cursor span {
 }
 
 .buton:hover::after {
-    width: 100%;
+    width: 100%;;
 
+}
+
+.footer {
+    font-family: 'Manrope';
+    color: #ebebeb;
+    background-color: #000;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bouton-ml{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bouton-ml :hover{
+    text-decoration: underline;
 }
 
 
@@ -573,7 +526,7 @@ body:hover .custom-cursor span {
         padding-bottom: 20px;
     }
 
-    .mail {
+    .buton {
         font-size: 16px;
         text-align: center;
         margin-top: 70px;
@@ -590,6 +543,14 @@ body:hover .custom-cursor span {
     .img-bridge {
         padding-top: 50px;
     }
+
+
+    .cv {
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
 
 
 

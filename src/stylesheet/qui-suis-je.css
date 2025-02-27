@@ -156,17 +156,6 @@ h1 span{
 }
 
 
-.footer {
-    font-family: 'Manrope';
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-
-
 .bouton-accueil {
     font-family: 'Manrope';
     font-size: 35px;
@@ -231,6 +220,28 @@ h1 span{
 .arrow {
     width: 52px;
     height: 38px;
+}
+
+.footer {
+    font-family: 'Manrope';
+    color: #000000;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.bouton-ml{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bouton-ml :hover{
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {
