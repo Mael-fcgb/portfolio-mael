@@ -320,6 +320,19 @@ body::after {
     padding-top: 100px;
 }
 
+.container-icon{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15vw;
+    gap: 100px;
+}
+
+.icon{
+    width: 70px;
+    padding-top: 100px;
+    height: auto;
+}
+
 
 .buton {
     font-family: 'Manrope-regular';
@@ -550,6 +563,19 @@ body::after {
         margin-top: 50px;
         margin-left: 0px;
     }
+
+    .container-icon{
+        
+        margin-left: 15vw;
+        gap: 70px;
+    }
+    
+    .icon{
+        width: 40px;
+        padding-top: 70px;
+        height: auto;
+    }
+    
 
 
 
